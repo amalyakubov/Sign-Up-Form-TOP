@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Serif:ital@0;1&display=swap');
+
 body {
     display: flex;
     height: 100vh;
@@ -7,13 +9,14 @@ body {
 }
 
 :root {
-    font-size: 1em;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --main-color: #E6E8E6;
+    font-size: 1.25em;
+    font-family: 'PT Serif', serif;
+    --main-color: #F2E9E6;
+    color: #866252;
 }
 
 .sidebar-container {
-    width: 30%;
+    width: 40%;
     flex-shrink: 0;
 }
 
@@ -59,7 +62,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: #F4F5F4;
+    background-color: #F2E9E6;
 }
 
 form {
@@ -70,6 +73,8 @@ form {
 .form-main > h2 {
     font-size: min(2em, 2vw);
     margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
 }
 
 .input-container {
@@ -84,6 +89,34 @@ form {
 .buttons-container {
     background-color: var(--main-color);
     height: 33vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: min(1.5em, 1.1vw);
+}
+
+.buttons-container > button {
+    background-color: #F4F5F4;
+    border: 0.2px solid grey;
+    border-radius: 2px;
+    font-size: min(3em, 1.1vw);
+
+    width: 20%;
+    height: 15%;
+    margin-top: 2.5%;
+}
+
+.buttons-container > button:hover {
+    width: 21%;
+    height: 20%;
+    transition: height 0.25s, width 0.25s;
+    border: 1px solid black;
+}
+
+.buttons-container > button:active {
+    background-color: #ddddddce;
+    border: 2px solid black;
+    transition: border 0.5s, background-color 0.05s;
 }
 
 .form-container {
@@ -106,6 +139,21 @@ form {
 }
 
 .intro-container p:first-child {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.25em;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    left: 15%;
+    top: 8%;
+    width: 5%;
+    height: 10%;
+    align-items: center;
+}
+
+.logo > p {
+    font-size: 5vh;
+    font-weight: 300;
 }
