@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto+Mono&display=swap');
 
 body {
     display: flex;
@@ -122,8 +123,11 @@ form {
 .form-container {
     display: flex;
     font-size: min(1em, 0.8vw);
-    text-transform: capitalize;
     justify-content: center;
+}
+
+.form-container label {
+    text-transform: capitalize;
 }
 
 .form-container input {
@@ -156,4 +160,18 @@ form {
 .logo > p {
     font-size: 5vh;
     font-weight: 300;
+}
+
+input {
+    all: unset;
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+}
+
+input:focus {
+    border: 0.5px solid blue;
+    width: 105%;
+    align-self: center;
+    transition: width 0.5s;
 }
