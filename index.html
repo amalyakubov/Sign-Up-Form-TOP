@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./js.js" defer></script>
 </head>
 <body>
     <div class="sidebar-container">
@@ -25,7 +26,7 @@
         <div class="form-main">
             <h2>Let's do this!</h2>
                 <div class="form-container">
-                    <form id="form">
+                    <form id="form" onsubmit="return isValid()">
                         <div class="col-1">
                             <div class='input-container'>
                                 <label for="first-name">first name</label>
