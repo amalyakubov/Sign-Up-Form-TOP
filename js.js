@@ -19,10 +19,13 @@ function isValid() {
     }
 }
 
+function addClass() {
+    firstPassword.classList.add('error');
+    secondPassword.classList.add('error');
+}
+
 document.addEventListener('submit', (event) => {
-    if (isValid()) {
-        firstPassword.classList.add('error');
-        secondPassword.classList.add('error');
+    if (!isValid()) {
+        addClass();
     }
 });
-

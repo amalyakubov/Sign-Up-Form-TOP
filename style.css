@@ -175,3 +175,7 @@ input:focus {
     align-self: center;
     transition: width 0.5s;
 }
+
+input.error {
+    border: 1px solid red;
+}
