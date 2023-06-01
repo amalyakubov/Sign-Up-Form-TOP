@@ -179,3 +179,10 @@ input:focus {
 input.error {
     border: 1px solid red;
 }
+
+#error {
+    font-size: 14px;
+    font-family: 'Robot Mono', monospace;
+    float: left;
+    color: red;
+}

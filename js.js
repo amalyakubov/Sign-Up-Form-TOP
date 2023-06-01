@@ -1,7 +1,7 @@
 const firstPassword = document.getElementById('password');
 const secondPassword = document.getElementById('confirm-password');
 const inputs = document.querySelector('input');
-
+const errorDisplay = document.getElementById('error');
 
 function allInputsFilled() {
     if (inputs.value != '') {
@@ -24,8 +24,13 @@ function addClass() {
     secondPassword.classList.add('error');
 }
 
+
 document.addEventListener('submit', (event) => {
     if (!isValid()) {
         addClass();
+        errorDisplay.innerHTML = 'Passwords do not match';
+    } else {
+        firstPassword.classList.remove('error');
+        secondPassword.classList.remove('error');   
     }
 });
